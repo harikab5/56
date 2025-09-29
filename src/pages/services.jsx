@@ -1,17 +1,18 @@
 import React from "react";
 import servicehero from "../assets/servicehero.mp4";
 import { Link } from "react-router-dom";
-import dealsImg from "../assets/deals.webp";
+import dealsImg from "../assets/whychoose.jpg";
 import ImpactSection from "../components/ImpactSection"; // adjust path
 
 
 // Service images
-import img1 from "../assets/feature1.webp";
-import img2 from "../assets/feature2.jpg";
-import img3 from "../assets/feature3.png";
+import img1 from "../assets/residential.jpg";
+import img2 from "../assets/commercial.jpg";
+import img3 from "../assets/industrial.jpg";
 import img4 from "../assets/heritage.jpg";
-import img5 from "../assets/faq.jpg";
+import img5 from "../assets/architectural.jpg";
 import img6 from "../assets/ethical.mp4";
+import project from "../assets/project.jpg";
 
 
 
@@ -45,7 +46,7 @@ const services = [
   {
     title: "Project Management",
     desc: "Comprehensive project management services to ensure timely and efficient completion of construction projects. We handle planning, coordination, and execution, keeping quality and budget in focus. Our expertise guarantees smooth workflows and successful outcomes for every project.",
-    img: img2,
+    img: project,
     path: "/Project-Management",
   },
   {
@@ -153,7 +154,7 @@ const ServicesPage = () => {
         </div>
         {/* Service: Project Management */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <img src={img2} alt="Project Management" className="w-full h-64 object-cover rounded-xl shadow-lg" />
+          <img src={project} alt="Project Management" className="w-full h-64 object-cover rounded-xl shadow-lg" />
           <div>
             <h3 className="text-2xl font-bold text-green-700 mb-2">Project Management</h3>
             <p className="text-gray-700 mb-2">We provide comprehensive project management services to ensure your construction project is completed on time, within budget, and to the highest quality standards. Our experienced managers oversee every phase, from planning and procurement to execution and delivery, ensuring clear communication, risk management, and client satisfaction throughout the process.</p>

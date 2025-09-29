@@ -1,9 +1,9 @@
 import React from "react";
 import blogHero from "../assets/blog.mp4";
 import { Brain, Code, BarChart3 } from "lucide-react";
-import feature1 from "../assets/feature1.webp"; // re
-import feature2 from "../assets/feature2.jpg"; // replace with your delivery-related image
-import feature3 from "../assets/feature3.png"; // replace with your cuisine variety image
+import feature1 from "../assets/article1.jpg"; // re
+import feature2 from "../assets/article2.jpg"; // replace with your delivery-related image
+import feature3 from "../assets/article3.jpg"; // replace with your cuisine variety image
 import { Link } from "react-router-dom";
 const categories = [
   {
@@ -186,7 +186,7 @@ export default function BlogHero() {
       
 
       {/* Featured Articles Section */}
-      <section className={`py-16 ${theme === 'dark' ? 'bg-[#222]' : 'bg-red-50'}`}>
+      <section className={`py-16 ${theme === 'dark' ? 'bg-[#222]' : 'bg-green-50'}`}>
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
@@ -217,7 +217,7 @@ export default function BlogHero() {
                   </p>
                  <Link
   to={feature.link}
-  className="text-red-500 font-semibold hover:underline"
+  className="text-green-500 font-semibold hover:underline"
 >
   Read More →
 </Link>
@@ -264,7 +264,7 @@ export default function BlogHero() {
 
 
 
-      <section className={`py-16 ${theme === 'dark' ? 'bg-[#222]' : 'bg-red-50'}`}>
+      <section className={`py-16 ${theme === 'dark' ? 'bg-[#222]' : 'bg-green-50'}`}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
@@ -323,7 +323,7 @@ export default function BlogHero() {
   {/* Item 1 */}
   <div className="space-y-4">
     <div className="flex gap-2">
-      <h3 className="text-red-600 font-bold">Myth:</h3>
+      <h3 className="text-green-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
         Green buildings are always more expensive to build.
       </p>
@@ -339,7 +339,7 @@ export default function BlogHero() {
   {/* Item 2 */}
   <div className="space-y-4">
     <div className="flex gap-2">
-      <h3 className="text-red-600 font-bold">Myth:</h3>
+      <h3 className="text-green-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
         Project delays are unavoidable in construction.
       </p>
@@ -355,7 +355,7 @@ export default function BlogHero() {
   {/* Item 3 */}
   <div className="space-y-4">
     <div className="flex gap-2">
-      <h3 className="text-red-600 font-bold">Myth:</h3>
+      <h3 className="text-green-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
         Prefabricated buildings are low quality.
       </p>
@@ -371,7 +371,7 @@ export default function BlogHero() {
   {/* Item 4 */}
   <div className="space-y-4">
     <div className="flex gap-2">
-      <h3 className="text-red-600 font-bold">Myth:</h3>
+      <h3 className="text-green-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
         Safety gear is only needed for high-risk jobs.
       </p>
@@ -387,7 +387,7 @@ export default function BlogHero() {
   {/* Item 5 */}
   <div className="space-y-4">
     <div className="flex gap-2">
-      <h3 className="text-red-600 font-bold">Myth:</h3>
+      <h3 className="text-green-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
         Technology slows down construction work.
       </p>
@@ -403,7 +403,7 @@ export default function BlogHero() {
   {/* Item 6 */}
   <div className="space-y-4">
     <div className="flex gap-2">
-      <h3 className="text-red-600 font-bold">Myth:</h3>
+      <h3 className="text-green-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
         Only large companies can afford project management services.
       </p>
@@ -420,7 +420,7 @@ export default function BlogHero() {
     </div>
   </section>
 
-<div className={`py-10 ${theme === 'dark' ? 'bg-[#000]' : 'bg-red-50'}`}>
+<div className={`py-10 ${theme === 'dark' ? 'bg-[#000]' : 'bg-green-50'}`}>
   <h2 className={`text-3xl font-bold text-center mb-8 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
     Construction Tips �️
   </h2>

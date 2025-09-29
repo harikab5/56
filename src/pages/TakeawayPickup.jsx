@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import takeVideo from "../assets/take.mp4";
-import take1 from "../assets/take1.jpg";
-import take2 from "../assets/take2.avif";
-import take3 from "../assets/take3.jpg";
+import projectHeroVideo from "../assets/projecthero.mp4";
+import take1 from "../assets/p1.jpg";
+import take2 from "../assets/p2.jpg";
+import take3 from "../assets/p1.jpg";
 
 import { FaShoppingBag, FaClock, FaMobileAlt, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -108,7 +109,7 @@ const TakeawayPickupHero = () => {
       <section className="relative w-full h-screen overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src={takeVideo}
+          src={projectHeroVideo}
           autoPlay
           loop
           muted
@@ -117,7 +118,7 @@ const TakeawayPickupHero = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
-            Project <span className="text-red-500">Management</span>
+            Project <span className="text-green-500">Management</span>
           </h1>
           <p className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl">
             Professional project management for seamless delivery, on time and within budget.
@@ -126,7 +127,7 @@ const TakeawayPickupHero = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 md:px-20 bg-red-50">
+      <section className="py-20 px-6 md:px-20 bg-green-50">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
@@ -152,7 +153,7 @@ const TakeawayPickupHero = () => {
         </div>
       </section>
             <section className="py-20 px-6 bg-white text-center" id="pricing">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">Project Plans</h2>
+        <h2 className="text-4xl font-bold text-green-500 mb-4">Project Plans</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Select the project management package that matches your needs and scale.
         </p>
@@ -162,7 +163,7 @@ const TakeawayPickupHero = () => {
             <div
               key={idx}
               className={`flex flex-col items-center rounded-2xl p-8 shadow-lg border 
-                ${plan.highlighted ? "bg-red-500 text-white scale-105" : "bg-white text-gray-800"}`}
+                ${plan.highlighted ? "bg-green-500 text-white scale-105" : "bg-white text-gray-800"}`}
             >
               <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
               <div className="text-4xl font-extrabold mb-2">
@@ -178,8 +179,8 @@ const TakeawayPickupHero = () => {
               <button
                 className={`px-6 py-3 rounded-full font-semibold transition 
                   ${plan.highlighted 
-                    ? "bg-white text-red-500 hover:bg-gray-100" 
-                    : "bg-red-500 text-white hover:bg-red-600"}`}
+                    ? "bg-white text-green-500 hover:bg-gray-100" 
+                    : "bg-green-500 text-white hover:bg-green-600"}`}
               >
                 Get Started
               </button>
@@ -190,7 +191,7 @@ const TakeawayPickupHero = () => {
 
 
       {/* Testimonials Section */}
-      <section className="py-10 px-4 bg-red-500">
+      <section className="py-10 px-4 bg-green-500">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <h2 className="text-4xl font-bold text-white mb-6">Client Testimonials</h2>
@@ -199,18 +200,18 @@ const TakeawayPickupHero = () => {
                 "{testimonial.text}"
               </p>
               <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-              <p className="text-red-500 text-sm">{testimonial.role}</p>
+              <p className="text-green-500 text-sm">{testimonial.role}</p>
             </div>
             <div className="flex justify-center md:justify-start gap-4 mt-6">
               <button
                 onClick={prevTestimonial}
-                className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+                className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
               >
                 <FaArrowLeft />
               </button>
               <button
                 onClick={nextTestimonial}
-                className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+                className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
               >
                 <FaArrowRight />
               </button>
@@ -228,7 +229,7 @@ const TakeawayPickupHero = () => {
 
       {/* Steps Section */}
       <section className="py-20 px-6 bg-white text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">Our Process</h2>
+        <h2 className="text-4xl font-bold text-green-500 mb-4">Our Process</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Effective project management in three clear steps.
         </p>
@@ -237,7 +238,7 @@ const TakeawayPickupHero = () => {
           {steps.map((step, idx) => (
             <div key={idx} className="flex items-center">
               <div className="flex flex-col hover:scale-105 transition items-center max-w-[200px]">
-                <div className="bg-red-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
+                <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
                   {step.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
@@ -258,7 +259,7 @@ const TakeawayPickupHero = () => {
           alt="Project management call to action"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute inset-0 bg-red-500/70 z-0"></div>
+        <div className="absolute inset-0 bg-green-500/70 z-0"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
           <h2 className="text-5xl font-extrabold mb-6">Ready to Start Your Project?</h2>

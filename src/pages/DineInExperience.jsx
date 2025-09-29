@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import industrialHero from "../assets/feature3.png";
-import industrial1 from "../assets/heritage.jpg";
-import industrial2 from "../assets/food1.webp";
-import industrial3 from "../assets/food2.webp";
+import industrialHeroVideo from "../assets/industrialhero.mp4";
+import industrial1 from "../assets/industrial.jpg";
+import industrial2 from "../assets/industrial2.jpg";
+import industrial3 from "../assets/industrial.jpg";
 
 import { FaIndustry, FaClipboardList, FaDraftingCompass, FaHardHat, FaCheckCircle, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -109,13 +110,17 @@ const DineInExperienceHero = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center bg-green-50">
-        <img
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
-          src={industrialHero}
-          alt="Industrial Project Hero"
+      <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-green-50">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover brightness-110 contrast-105 saturate-110"
+          src={industrialHeroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          style={{ filter: 'brightness(1.1) contrast(1.05) saturate(1.1)' }}
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
             Leading <span className="text-green-500">Industrial Projects</span>
@@ -174,7 +179,7 @@ const DineInExperienceHero = () => {
             <div
               key={index}
               className={`flex flex-col items-center rounded-2xl p-8 shadow-lg border 
-                ${plan.highlighted ? "bg-red-500 text-white scale-105" : "bg-white text-gray-800"}`}
+                ${plan.highlighted ? "bg-green-500 text-white scale-105" : "bg-white text-gray-800"}`}
             >
               <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
               <div className="text-4xl font-extrabold mb-2">
@@ -201,7 +206,7 @@ const DineInExperienceHero = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-10 px-4 bg-red-50">
+      <section className="py-10 px-4 bg-green-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           {/* Left Side - Text Card */}
           <div className="text-center md:text-left">

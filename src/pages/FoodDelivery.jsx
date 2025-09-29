@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import foodhero from "../assets/feature1.webp"; // Use a residential project image or video
-import serviceImg from "../assets/feature2.jpg";
-import food from "../assets/feature3.png";
+import residentialhero from "../assets/residentialhero.mp4"; // Residential hero video
+import serviceImg from "../assets/residential.jpg";
+import food from "../assets/residential2.jpg";
 import food3 from "../assets/heritage.jpg";
 
 import { FaUtensils, FaShoppingCart, FaTruck, FaSmile, FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -104,11 +105,14 @@ const FoodDeliveryHero = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center bg-green-50">
-        <img
+  <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-green-50">
+        <video
           className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
-          src={foodhero}
-          alt="Residential Project Hero"
+          src={residentialhero}
+          autoPlay
+          loop
+          muted
+          playsInline
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
@@ -122,7 +126,7 @@ const FoodDeliveryHero = () => {
       </section>
 
       {/* About Our Service Section */}
-      <section className="py-20 px-6 md:px-20 bg-red-50">
+      <section className="py-20 px-6 md:px-20 bg-green-50">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
           <div>
@@ -147,12 +151,8 @@ const FoodDeliveryHero = () => {
 <p className="text-black mb-4">
   We use premium materials, innovative techniques, and sustainable practices to ensure your home is built to last and meets the highest standards.
 </p>
-<p className="text-black mb-4">
-  Our transparent process keeps you informed and involved at every stage, so you can watch your dream home come to life with confidence.
-</p>
-<p className="text-black mb-4">
-  Contact us today to start your residential project and experience a seamless, stress-free building journey.
-</p>
+ 
+  
 
 
           </div>
@@ -173,7 +173,7 @@ const FoodDeliveryHero = () => {
           <div
             key={index}
             className={`flex flex-col items-center rounded-2xl p-8 shadow-lg border 
-              ${plan.highlighted ? "bg-red-500 text-white scale-105" : "bg-white text-gray-800"}`}
+              ${plan.highlighted ? "bg-green-500 text-white scale-105" : "bg-white text-gray-800"}`}
           >
             <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
             <div className="text-4xl font-extrabold mb-2">
@@ -189,8 +189,8 @@ const FoodDeliveryHero = () => {
             <button
               className={`px-6 py-3 rounded-full font-semibold transition 
                 ${plan.highlighted 
-                  ? "bg-white text-red-500 hover:bg-gray-100" 
-                  : "bg-red-500 text-white hover:bg-red-600"}`}
+                  ? "bg-white text-green-500 hover:bg-gray-100" 
+                  : "bg-green-500 text-white hover:bg-green-600"}`}
             >
               Get Started
             </button>
@@ -201,7 +201,7 @@ const FoodDeliveryHero = () => {
 
 
 
-   <section className="py-10 px-4 bg-red-50">
+   <section className="py-10 px-4 bg-green-50">
   <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
     {/* Left Side - Text Card */}
     <div className="text-center md:text-left">

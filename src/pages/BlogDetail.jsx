@@ -1,7 +1,7 @@
 import React from "react";
-import feature1 from "../assets/feature1.webp"; 
-import feature2 from "../assets/feature2.jpg"; 
-import feature3 from "../assets/feature3.png"; 
+import feature1 from "../assets/article1.jpg"; 
+import feature2 from "../assets/article2.jpg"; 
+import feature3 from "../assets/article3.jpg"; 
 import { useParams, Link } from "react-router-dom";
 
 export default function BlogDetail() {
