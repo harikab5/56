@@ -8,62 +8,64 @@ import { FaShoppingBag, FaClock, FaMobileAlt, FaArrowLeft, FaArrowRight } from "
 
 const testimonials = [
   {
-    name: "Olivia Carter",
-    role: "Foodie on the Go",
-    text: "Ordering for pickup is super easy — my food is always ready when I arrive!",
+    name: "Priya Sharma",
+    role: "Construction Manager",
+    text: "Their project management team kept our build on track and under budget. Communication was excellent!",
   },
   {
-    name: "James Allen",
-    role: "Office Worker",
-    text: "Lunch breaks are now stress-free. I just grab and go — no waiting in lines.",
+    name: "Rahul Verma",
+    role: "Business Owner",
+    text: "We launched our new office on time thanks to their detailed planning and proactive risk management.",
   },
   {
-    name: "Sophia Evans",
-    role: "Parent",
-    text: "Takeaway meals save my evenings. Fresh, fast, and perfect for family dinners.",
+    name: "Anjali Mehta",
+    role: "IT Project Lead",
+    text: "The team handled every challenge with professionalism. Our software rollout was a huge success!",
   },
   {
-    name: "Ethan Lewis",
-    role: "Student",
-    text: "Affordable and quick! I can order between classes and pick it up on time.",
+    name: "Vikram Singh",
+    role: "Homeowner",
+    text: "From design to delivery, their project management made my home renovation stress-free.",
   },
   {
-    name: "Amelia Scott",
-    role: "Regular Customer",
-    text: "Reliable pickup service and delicious food every single time!",
+    name: "Sonal Patel",
+    role: "Event Coordinator",
+    text: "Every milestone was met on time. I highly recommend their project management services!",
   },
 ];
 const plans = [
   {
-    name: "Starter Plan",
-    price: "$59",
-    period: "/week",
+    name: "Basic Project Plan",
+    price: "₹15,000",
+    period: "/project",
     features: [
-      "5 chef-prepared meals",
-      "Balanced nutrition",
-      "Pickup or delivery",
+      "Initial project assessment",
+      "Timeline & budget planning",
+      "Weekly progress reports",
     ],
     highlighted: false,
   },
   {
-    name: "Standard Plan",
-    price: "$99",
-    period: "/week",
+    name: "Standard Project Plan",
+    price: "₹35,000",
+    period: "/project",
     features: [
-      "10 chef-prepared meals",
-      "Customizable menu",
-      "Free delivery",
+      "All Basic features",
+      "Resource allocation",
+      "Risk management",
+      "Bi-weekly client meetings",
     ],
     highlighted: true,
   },
   {
-    name: "Premium Plan",
-    price: "$179",
-    period: "/week",
+    name: "Premium Project Plan",
+    price: "₹60,000",
+    period: "/project",
     features: [
-      "20 meals + snacks",
-      "Dietitian-approved",
-      "Priority delivery",
+      "All Standard features",
+      "On-site supervision",
+      "Quality assurance checks",
+      "Post-project support",
     ],
     highlighted: false,
   },
@@ -72,18 +74,18 @@ const plans = [
 const steps = [
   {
     icon: <FaMobileAlt size={28} className="text-white" />,
-    title: "Order Online",
-    description: "Browse the menu and place your takeaway order in seconds.",
+    title: "Define Goals",
+    description: "Collaborate to set clear project objectives and deliverables.",
   },
   {
     icon: <FaClock size={28} className="text-white" />,
-    title: "Choose Pickup Time",
-    description: "Select a convenient time that works best for you.",
+    title: "Plan & Schedule",
+    description: "Develop a detailed timeline, allocate resources, and identify risks.",
   },
   {
     icon: <FaShoppingBag size={28} className="text-white" />,
-    title: "Grab & Go",
-    description: "Skip the wait — your food will be ready when you arrive.",
+    title: "Execute & Deliver",
+    description: "Monitor progress, communicate updates, and ensure successful completion.",
   },
 ];
 
@@ -115,10 +117,10 @@ const TakeawayPickupHero = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
-            Takeaway <span className="text-red-500">& Pickup</span>
+            Project <span className="text-red-500">Management</span>
           </h1>
           <p className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl">
-            Fresh food, no waiting — order online and pick it up right on time.
+            Professional project management for seamless delivery, on time and within budget.
           </p>
         </div>
       </section>
@@ -129,32 +131,30 @@ const TakeawayPickupHero = () => {
           <div>
             <img
               src={take1}
-              alt="Takeaway meals"
+              alt="Project management team"
               className="w-full h-auto rounded-2xl shadow-lg"
             />
           </div>
           <div>
             <h2 className="text-4xl font-bold text-black mb-6">
-              Why Choose Our Takeaway Service?
+              Why Choose Our Project Management?
             </h2>
             <p className="text-black mb-4">
-              Enjoy your favorite meals without the wait. Simply place your order online, 
-              choose a pickup time, and we'll have it ready.
+              We ensure your projects are delivered efficiently, with clear communication and expert coordination at every stage.
             </p>
             <p className="text-black mb-4">
-              Perfect for busy workdays, quick lunches, or a hassle-free dinner. 
-              Get high-quality food on your schedule.
+              Our experienced managers handle planning, execution, and risk mitigation for projects of any size or complexity.
             </p>
             <p className="text-black mb-4">
-              With real-time order updates, you’ll always know when your meal is ready to grab.
+              Enjoy peace of mind with transparent progress tracking and proactive problem-solving.
             </p>
           </div>
         </div>
       </section>
             <section className="py-20 px-6 bg-white text-center" id="pricing">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">Meal Plans</h2>
+        <h2 className="text-4xl font-bold text-red-500 mb-4">Project Plans</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Pick the plan that fits your lifestyle and goals.
+          Select the project management package that matches your needs and scale.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -181,7 +181,7 @@ const TakeawayPickupHero = () => {
                     ? "bg-white text-red-500 hover:bg-gray-100" 
                     : "bg-red-500 text-white hover:bg-red-600"}`}
               >
-                Subscribe Now
+                Get Started
               </button>
             </div>
           ))}
@@ -193,7 +193,7 @@ const TakeawayPickupHero = () => {
       <section className="py-10 px-4 bg-red-500">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold text-white mb-6">What Customers Say</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Client Testimonials</h2>
             <div className="bg-gray-100 rounded-2xl p-8 shadow-lg">
               <p className="text-gray-700 text-lg italic mb-6">
                 "{testimonial.text}"
@@ -219,7 +219,7 @@ const TakeawayPickupHero = () => {
           <div className="flex justify-center">
             <img
               src={take2}
-              alt="Takeaway ready"
+              alt="Project management success"
               className="rounded-2xl shadow-lg w-full max-w-md h-[350px] w-[500px] object-cover"
             />
           </div>
@@ -228,9 +228,9 @@ const TakeawayPickupHero = () => {
 
       {/* Steps Section */}
       <section className="py-20 px-6 bg-white text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">How It Works</h2>
+        <h2 className="text-4xl font-bold text-red-500 mb-4">Our Process</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Quick and convenient takeaway ordering in just three easy steps.
+          Effective project management in three clear steps.
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-6">
@@ -255,21 +255,21 @@ const TakeawayPickupHero = () => {
       <section className="relative py-24 px-6 md:px-20 text-white">
         <img
           src={take3}
-          alt="Pickup service"
+          alt="Project management call to action"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
         <div className="absolute inset-0 bg-red-500/70 z-0"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-          <h2 className="text-5xl font-extrabold mb-6">Ready for Faster Meals?</h2>
+          <h2 className="text-5xl font-extrabold mb-6">Ready to Start Your Project?</h2>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Place your takeaway order now and pick it up when it’s perfect for you.
+            Contact us today to discuss your project and experience stress-free management from start to finish.
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="bg-white text-black py-4 px-10 text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
           >
-            Order Takeaway
+            Get a Free Consultation
           </button>
         </div>
       </section>

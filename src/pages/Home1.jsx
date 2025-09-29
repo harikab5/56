@@ -5,6 +5,7 @@ import home1hero from "../assets/home1hero (1).mp4";
 import home1about from "../assets/home1about.mp4";
 
 
+
 export default function Home1() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -134,7 +135,7 @@ export default function Home1() {
             </div>
             {/* Front Side */}
             <div className="absolute backface-hidden w-full h-full">
-              <img src="src/assets/finishingworks.jpg" alt="Modern bathroom" className="w-full h-full object-cover rounded-lg shadow-lg" />
+              <img src="src/assets/finishingworks1.jpg" alt="Modern bathroom" className="w-full h-full object-cover rounded-lg shadow-lg" />
             </div>
           </div>
           <div className="mt-4 text-center">

@@ -1,125 +1,108 @@
 import React, { useState } from "react";
-import mealVideo from "../assets/meal.mp4";
-import meal1 from "../assets/meals1.webp";
-import meal2 from "../assets/meal2.jpg";
-import meal3 from "../assets/meal3.jpg";
-
-import { FaUtensils, FaClock, FaLeaf, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-const testimonials = [
-  {
-    name: "Ava Mitchell",
-    role: "Busy Professional",
-    text: "These subscription meals save me hours every week — healthy, delicious, and always on time.",
-  },
-  {
-    name: "Liam Walker",
-    role: "Fitness Enthusiast",
-    text: "The high-protein options fit perfectly with my workout routine — no cooking, no stress!",
-  },
-  {
-    name: "Isabella Green",
-    role: "New Parent",
-    text: "Having fresh meals delivered daily has been a lifesaver while juggling family and work.",
-  },
-  {
-    name: "Noah Davis",
-    role: "Student",
-    text: "Affordable, nutritious, and so much better than instant noodles — I'm hooked!",
-  },
-  {
-    name: "Mia Johnson",
-    role: "Repeat Customer",
-    text: "I've had this plan for six months — zero complaints, only compliments from my taste buds!",
-  },
-];
-
-const steps = [
-  {
-    icon: <FaUtensils size={28} className="text-white" />,
-    title: "Pick Your Plan",
-    description: "Choose from weekly or monthly meal subscriptions.",
-  },
-  {
-    icon: <FaLeaf size={28} className="text-white" />,
-    title: "Customize Your Menu",
-    description: "Select from vegetarian, vegan, or balanced diet options.",
-  },
-  {
-    icon: <FaClock size={28} className="text-white" />,
-    title: "Enjoy Daily Fresh Meals",
-    description: "Delivered to your door, ready to heat and eat.",
-  },
-];
+import arch1 from "../assets/feature1.webp";
+import arch2 from "../assets/feature2.jpg";
+import arch3 from "../assets/feature3.png";
+import { FaArrowLeft, FaArrowRight, FaRegCheckCircle, FaRegLightbulb, FaRegEdit } from "react-icons/fa";
 
 const plans = [
   {
-    name: "Starter Plan",
-    price: "$59",
-    period: "/week",
+    name: "Basic Meal Plan",
+    price: "₹2,500",
+    period: "/month",
     features: [
-      "5 chef-prepared meals",
-      "Balanced nutrition",
-      "Pickup or delivery",
+      "1 meal per day",
+      "Vegetarian options",
+      "Weekly menu rotation",
+      "Free delivery",
     ],
     highlighted: false,
   },
   {
-    name: "Standard Plan",
-    price: "$99",
-    period: "/week",
+    name: "Balanced Meal Plan",
+    price: "₹4,500",
+    period: "/month",
     features: [
-      "10 chef-prepared meals",
+      "2 meals per day",
+      "Veg & Non-Veg options",
       "Customizable menu",
+      "Nutritionist support",
       "Free delivery",
     ],
     highlighted: true,
   },
   {
-    name: "Premium Plan",
-    price: "$179",
-    period: "/week",
+    name: "Premium Meal Plan",
+    price: "₹6,500",
+    period: "/month",
     features: [
-      "20 meals + snacks",
-      "Dietitian-approved",
+      "3 meals per day",
+      "Personalized diet",
+      "Chef's specials",
       "Priority delivery",
+      "Snack add-ons",
     ],
     highlighted: false,
   },
 ];
 
-const SubscriptionMealsHero = () => {
-  const [index, setIndex] = useState(0);
+const testimonialsData = [
+  {
+    text: "The subscription meals are delicious and save me so much time every day!",
+    name: "Amit K.",
+    role: "Working Professional",
+  },
+  {
+    text: "Healthy, tasty, and always on time. My family loves the variety in the menu.",
+    name: "Priya S.",
+    role: "Homemaker",
+  },
+  {
+    text: "I finally found a meal service that fits my diet and busy schedule.",
+    name: "Rahul M.",
+    role: "Fitness Enthusiast",
+  },
+];
 
-  const nextTestimonial = () => {
-    setIndex((prev) => (prev + 1) % testimonials.length);
-  };
+const steps = [
+  {
+    icon: <FaRegLightbulb size={32} className="text-red-500" />,
+    title: "Choose Your Plan",
+    description: "Select a meal plan that fits your lifestyle and preferences.",
+  },
+  {
+    icon: <FaRegEdit size={32} className="text-red-500" />,
+    title: "Customize & Subscribe",
+    description: "Personalize your meals and set your delivery schedule.",
+  },
+  {
+    icon: <FaRegCheckCircle size={32} className="text-red-500" />,
+    title: "Enjoy Fresh Meals",
+    description: "Receive freshly prepared meals at your doorstep every day.",
+  },
+];
+
+const SubscriptionMeals = () => {
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const testimonial = testimonialsData[testimonialIndex];
 
   const prevTestimonial = () => {
-    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setTestimonialIndex((prev) => (prev === 0 ? testimonialsData.length - 1 : prev - 1));
+  };
+  const nextTestimonial = () => {
+    setTestimonialIndex((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
   };
 
-  const testimonial = testimonials[index];
-
   return (
-    <div>
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src={mealVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
-            Subscription <span className="text-red-500">Meals</span>
+      <section className="relative h-[60vh] flex items-center justify-center text-center bg-red-500">
+        <div className="absolute inset-0 bg-black/40 z-0"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center w-full">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-lg">
+            Subscription Meals
           </h1>
           <p className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl">
-            Fresh, healthy, chef-prepared meals — delivered to your door every day.
+            Fresh, healthy, and convenient meal plans delivered to your doorstep every day.
           </p>
         </div>
       </section>
@@ -129,39 +112,36 @@ const SubscriptionMealsHero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src={meal1}
-              alt="Subscription meal"
+              src={arch1}
+              alt="Delicious subscription meal"
               className="w-full h-auto rounded-2xl shadow-lg"
             />
           </div>
           <div>
             <h2 className="text-4xl font-bold text-black mb-6">
-              Why Choose Our Meal Subscription?
+              Why Choose Our Subscription Meals?
             </h2>
             <p className="text-black mb-4">
-              Skip grocery shopping, skip cooking, and skip the stress. 
-              Our meal plans are designed for busy lifestyles.
+              Our chefs craft nutritious and tasty meals using fresh, locally sourced ingredients.
             </p>
             <p className="text-black mb-4">
-              Every dish is crafted by professional chefs using fresh ingredients 
-              and delivered in eco-friendly packaging.
+              Flexible plans, customizable menus, and options for every dietary need.
             </p>
             <p className="text-black mb-4">
-              Whether you're aiming for weight management, fitness goals, or just 
-              convenient healthy eating, we've got you covered.
+              Enjoy hassle-free, on-time delivery and never worry about cooking or cleaning again.
             </p>
             <p className="text-black mb-4">
-              Flexible plans, customizable menus, and no long-term commitments.
+              Perfect for busy professionals, families, and fitness enthusiasts.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Plans Section */}
       <section className="py-20 px-6 bg-white text-center" id="pricing">
         <h2 className="text-4xl font-bold text-red-500 mb-4">Meal Plans</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Pick the plan that fits your lifestyle and goals.
+          Choose the subscription that best fits your appetite and schedule.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -199,7 +179,7 @@ const SubscriptionMealsHero = () => {
       <section className="py-10 px-4 bg-red-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold text-black mb-6">What Customers Say</h2>
+            <h2 className="text-4xl font-bold text-black mb-6">What Our Customers Say</h2>
             <div className="bg-gray-100 rounded-2xl p-8 shadow-lg">
               <p className="text-gray-700 text-lg italic mb-6">
                 "{testimonial.text}"
@@ -224,8 +204,8 @@ const SubscriptionMealsHero = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src={meal2}
-              alt="Healthy meal plan"
+              src={arch2}
+              alt="Healthy meal presentation"
               className="rounded-2xl shadow-lg w-full max-w-md h-[350px] w-[500px] object-cover"
             />
           </div>
@@ -236,7 +216,7 @@ const SubscriptionMealsHero = () => {
       <section className="py-20 px-6 bg-white text-center">
         <h2 className="text-4xl font-bold text-red-500 mb-4">How It Works</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Healthy eating made easy — get started in three quick steps.
+          Get started with your meal subscription in three easy steps.
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-6">
@@ -260,8 +240,8 @@ const SubscriptionMealsHero = () => {
       {/* Call to Action Section */}
       <section className="relative py-24 px-6 md:px-20 text-white">
         <img
-          src={meal3}
-          alt="Meal delivery setup"
+          src={arch3}
+          alt="Fresh meal delivery"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
         <div className="absolute inset-0 bg-red-500/70 z-0"></div>
@@ -269,7 +249,7 @@ const SubscriptionMealsHero = () => {
         <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
           <h2 className="text-5xl font-extrabold mb-6">Ready to Eat Better Every Day?</h2>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Subscribe today and enjoy chef-prepared meals — no cooking required.
+            Subscribe now and enjoy fresh, healthy meals delivered to your door.
           </p>
           <button
             onClick={() => {
@@ -285,4 +265,4 @@ const SubscriptionMealsHero = () => {
   );
 };
 
-export default SubscriptionMealsHero;
+export default SubscriptionMeals;

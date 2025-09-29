@@ -1,36 +1,31 @@
 import React, { useState } from "react";
-import foodhero from "../assets/foodhero.mp4";
-import serviceImg from "../assets/food1.webp"; // Replace with your service image
-import food from "../assets/food2.webp"; // <-- Import your image
-import food3 from "../assets/food3.jpg"; // Replace with your call to action image
+import foodhero from "../assets/feature1.webp"; // Use a residential project image or video
+import serviceImg from "../assets/feature2.jpg";
+import food from "../assets/feature3.png";
+import food3 from "../assets/heritage.jpg";
 
 import { FaUtensils, FaShoppingCart, FaTruck, FaSmile, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Food Blogger",
-    text: "The delivery was super fast and the food was absolutely delicious! Highly recommend this service.",
+    name: "Amit Sharma",
+    role: "Homeowner",
+    text: "Our dream home was built on time and with great attention to detail. The team was professional and transparent throughout the process.",
   },
   {
-    name: "Michael Lee",
-    role: "Chef",
-    text: "I was impressed by how fresh everything was. Definitely a go-to for late-night cravings.",
+    name: "Priya Verma",
+    role: "Apartment Owner",
+    text: "The quality of construction and finishing exceeded our expectations. Highly recommended for residential projects!",
   },
   {
-    name: "Emily Davis",
-    role: "Student",
-    text: "Affordable and tasty! I love that I can track my order in real-time.",
+    name: "Ravi Kumar",
+    role: "Investor",
+    text: "Excellent project management and communication. Every milestone was met as promised.",
   },
   {
-    name: "David Wilson",
-    role: "Business Analyst",
-    text: "Best restaurant delivery experience I've had. Excellent customer support as well.",
-  },
-  {
-    name: "Olivia Martinez",
-    role: "Designer",
-    text: "Meals always arrive hot and neatly packed. Perfect for busy work days.",
+    name: "Sunita Rao",
+    role: "Resident",
+    text: "The team made the entire process stress-free, from planning to handover. We love our new home!",
   },
 ];
  
@@ -38,56 +33,56 @@ const testimonials = [
  const steps = [
   {
     icon: <FaUtensils size={28} className="text-white" />,
-    title: "Choose Your Meal",
-    description: "Browse our menu and select your favorite dishes quickly.",
+    title: "Consultation",
+    description: "Discuss your vision and requirements with our residential project experts.",
   },
   {
     icon: <FaShoppingCart size={28} className="text-white" />,
-    title: "Place Your Order",
-    description: "Add meals to your cart, customize options, and checkout securely.",
+    title: "Planning",
+    description: "We create a detailed project plan, timeline, and transparent estimate.",
   },
   {
     icon: <FaTruck size={28} className="text-white" />,
-    title: "Fast Delivery",
-    description: "Track your order in real-time as it arrives fresh and hot.",
+    title: "Design",
+    description: "Our architects design your dream home with modern amenities and style.",
   },
   {
     icon: <FaSmile size={28} className="text-white" />,
-    title: "Enjoy Your Food",
-    description: "Delicious meals delivered to your doorstep with satisfaction.",
+    title: "Construction",
+    description: "We build your home using quality materials and skilled professionals.",
   },
-];
+ ];
  const plans = [
     {
-      name: "Starter",
-      price: "$9",
-      period: "/month",
+      name: "Basic Home",
+      price: "$50k+",
+      period: "",
       features: [
-        "1 meal per day",
-        "Free delivery over $20",
-        "Basic support",
+        "1-2 BHK construction",
+        "Standard materials",
+        "Essential amenities",
       ],
       highlighted: false,
     },
     {
-      name: "Regular",
-      price: "$19",
-      period: "/month",
+      name: "Family Home",
+      price: "$100k+",
+      period: "",
       features: [
-        "2 meals per day",
-        "Priority delivery",
-        "Discount coupons",
+        "2-4 BHK construction",
+        "Premium materials",
+        "Custom interiors",
       ],
       highlighted: true,
     },
     {
-      name: "Premium",
-      price: "$29",
-      period: "/month",
+      name: "Luxury Villa",
+      price: "$250k+",
+      period: "",
       features: [
-        "Unlimited meals",
-        "Free delivery always",
-        "Premium support",
+        "4+ BHK construction",
+        "Luxury finishes",
+        "Landscaping & smart home",
       ],
       highlighted: false,
     },
@@ -109,23 +104,19 @@ const FoodDeliveryHero = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center bg-green-50">
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
           src={foodhero}
-          autoPlay
-          loop
-          muted
-          playsInline
+          alt="Residential Project Hero"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
-            Delicious <span className="text-red-500">Food</span> Delivered Fast
+            Beautiful <span className="text-green-500">Homes</span> Built for You
           </h1>
           <p className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl">
-            Enjoy hot, fresh, and tasty meals at your doorstep – quick delivery, 
-            multiple cuisines, and unbeatable offers just for you!
+            Expert residential construction, modern designs, and quality you can trust. Start your dream home journey with us today!
           </p>
         </div>
       </section>
@@ -145,28 +136,22 @@ const FoodDeliveryHero = () => {
           {/* Right Content */}
           <div>
             <h2 className="text-4xl font-bold text-black mb-6">
-              About Our Service
+              About Our Residential Projects
             </h2>
             <p className="text-black mb-4">
-  Our food delivery service ensures that you get fresh and delicious meals 
-  at your doorstep in record time. We partner with top restaurants and 
-  chefs to bring a wide variety of cuisines to your table.
+  We specialize in building modern, comfortable, and energy-efficient homes tailored to your needs. Our experienced team manages every aspect of your residential project, from design and planning to construction and finishing.
 </p>
 <p className="text-black mb-4">
-  Whether it’s a quick lunch, a family dinner, or a special celebration, 
-  we guarantee quality, hygiene, and satisfaction with every order.
+  Whether you’re looking for a cozy apartment, a spacious family home, or a luxury villa, we deliver quality craftsmanship and attention to detail in every project.
 </p>
 <p className="text-black mb-4">
-  We carefully select only the finest ingredients and prepare meals with utmost care 
-  to maintain freshness and flavor. Every order is handled with strict hygiene standards.
+  We use premium materials, innovative techniques, and sustainable practices to ensure your home is built to last and meets the highest standards.
 </p>
 <p className="text-black mb-4">
-  Our platform makes ordering seamless and convenient – choose your favorite dishes, 
-  customize them to your liking, and track your delivery in real time.
+  Our transparent process keeps you informed and involved at every stage, so you can watch your dream home come to life with confidence.
 </p>
 <p className="text-black mb-4">
-  We also offer flexible subscription plans, catering services for events, and special 
-  discounts for bulk orders, ensuring there’s something for everyone.
+  Contact us today to start your residential project and experience a seamless, stress-free building journey.
 </p>
 
 
@@ -178,9 +163,9 @@ const FoodDeliveryHero = () => {
        
 
     <section className="py-20 px-6 bg-white text-center" id="pricing">
-      <h2 className="text-4xl font-bold text-red-500 mb-4">Our Pricing</h2>
+      <h2 className="text-4xl font-bold text-green-500 mb-4">Our Home Packages</h2>
       <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-        Choose a plan that fits your appetite. Upgrade anytime — no hidden fees!
+        Choose a package that fits your lifestyle and budget. Upgrade anytime — no hidden costs!
       </p>
 
       <div className="grid  md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -221,27 +206,27 @@ const FoodDeliveryHero = () => {
     {/* Left Side - Text Card */}
     <div className="text-center md:text-left">
       <h2 className="text-4xl font-bold text-black mb-6">
-        What Our Customers Say
+        What Our Clients Say
       </h2>
       <div className="bg-gray-100 rounded-2xl p-8 shadow-lg">
         <p className="text-gray-700 text-lg italic mb-6">
           "{testimonial.text}"
         </p>
         <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-        <p className="text-red-500 text-sm">{testimonial.role}</p>
+  <p className="text-green-500 text-sm">{testimonial.role}</p>
       </div>
 
       {/* Arrows */}
       <div className="flex justify-center md:justify-start gap-4 mt-6">
         <button
           onClick={prevTestimonial}
-          className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+          className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
         >
           <FaArrowLeft />
         </button>
         <button
           onClick={nextTestimonial}
-          className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+          className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
         >
           <FaArrowRight />
         </button>
@@ -251,17 +236,17 @@ const FoodDeliveryHero = () => {
     {/* Right Side - Image */}
     <div className="flex justify-center">
       <img
-        src={food}
-        alt="Delicious food"
+  src={food}
+  alt="Residential Project"
         className="rounded-2xl shadow-lg w-full max-w-md h-[350px] w-[500px] object-cover"
       />
     </div>
   </div>
 </section>
 <section className="py-20 px-6 bg-white text-center">
-      <h2 className="text-4xl font-bold text-red-500 mb-4">How It Works</h2>
+      <h2 className="text-4xl font-bold text-green-500 mb-4">How It Works</h2>
       <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-        Ordering delicious food from your favorite restaurant is simple and fast.
+        Building your dream home is simple and stress-free with our proven process.
       </p>
 
       <div className="flex flex-wrap justify-center items-center gap-6">
@@ -269,7 +254,7 @@ const FoodDeliveryHero = () => {
           <div key={index} className="flex items-center">
             {/* Step card */}
             <div className="flex flex-col  hover:scale-105 transition items-center max-w-[200px]">
-              <div className="bg-red-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
+              <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
                 {step.icon}
               </div>
               <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
@@ -293,29 +278,28 @@ const FoodDeliveryHero = () => {
   {/* Background Image */}
   <img
     src={food3}
-    alt="Delicious food"
+    alt="Residential Project"
     className="absolute inset-0 w-full h-full object-cover z-0"
   />
 
-  {/* Red Transparent Overlay */}
-  <div className="absolute inset-0 bg-red-500/70 z-0"></div>
+  {/* Green Transparent Overlay */}
+  <div className="absolute inset-0 bg-green-500/70 z-0"></div>
 
   {/* Content */}
   <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
     <h2 className="text-5xl  font-extrabold mb-6">
-      Ready to Order?
+      Ready to Build Your Home?
     </h2>
     <p className="text-lg md:text-xl mb-8 leading-relaxed">
-      Order now and get your favorite meals delivered <br /> 
-      fresh, hot, and in record time. Taste the difference today!
+      Start your residential project with us and experience quality, transparency, and peace of mind. Your dream home is just a step away!
     </p>
     <button
       onClick={() => {
         document.getElementById("pricing").scrollIntoView({ behavior: "smooth" });
       }}
-      className="bg-white text-black py-4 px-10 text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
+      className="bg-white text-green-600 py-4 px-10 text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
     >
-      Order Now
+      Get Started
     </button>
   </div>
 </section>

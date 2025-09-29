@@ -6,24 +6,24 @@ import contact3 from "../assets/contact3.webp";
 import faqImage from "../assets/faq.jpg";
 const faqs = [
   {
-    question: "How do I place an order online?",
-    answer: "You can easily order through our website or mobile app by browsing the menu, selecting your dishes, and checking out securely.",
+    question: "How do I request a construction project quote?",
+    answer: "You can request a quote by filling out our contact form with your project details, or by calling our office directly. Our team will get back to you within 24 hours.",
   },
   {
-    question: "Do you offer home delivery?",
-    answer: "Yes, we provide fast and reliable home delivery to your doorstep within our service area.",
+    question: "What types of construction services do you offer?",
+    answer: "We provide residential, commercial, and industrial construction, as well as renovation, project management, and architectural design services.",
   },
   {
-    question: "Can I customize my order?",
-    answer: "Absolutely! You can add special instructions, choose spice levels, and request add-ons while placing your order.",
+    question: "Can I schedule a site visit or consultation?",
+    answer: "Yes! Please contact us to schedule a free site visit or consultation with our experts at your convenience.",
   },
   {
-    question: "What areas do you deliver to?",
-    answer: "We currently deliver across major parts of the city. You can check delivery availability by entering your location at checkout.",
+    question: "Are you licensed and insured?",
+    answer: "Absolutely. We are fully licensed, insured, and comply with all local building codes and safety regulations.",
   },
   {
-    question: "Do you offer special deals or discounts?",
-    answer: "Yes, we regularly run promotions, combo offers, and discounts. Keep an eye on our website or app for the latest deals.",
+    question: "How do you ensure project quality and safety?",
+    answer: "We follow strict quality control processes and safety protocols on every project, with regular inspections and transparent communication.",
   },
 ];
 
@@ -33,18 +33,18 @@ const faqs = [
 const cards = [
   {
     img: contact1,
-    title: "Visit Us",
-    text: "123 Business Street, Suite 100, YourCity",
+    title: "Head Office",
+    text: "456 Construction Avenue, Suite 200, YourCity",
   },
   {
     img: contact2,
-    title: "Email Us",
-    text: "stackly.com",
+    title: "Email",
+    text: "info@yourconstructionco.com",
   },
   {
     img: contact3,
-    title: "Customer Care",
-    text: "+1 (800) 123-4567",
+    title: "Phone",
+    text: "+1 (800) 555-9876",
   },
 ];
 
@@ -99,11 +99,10 @@ export default function ContactHero() {
         {/* Content */}
         <div className={`relative text-center px-4 max-w-2xl ${theme === 'dark' ? 'text-white' : 'text-white'}`}> 
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-            Get in <span className="text-red-500">Touch</span> Today
+            Contact <span className="text-red-500">Our Construction Team</span>
           </h1>
           <p className="text-lg md:text-2xl font-light mb-6">
-  Serving <span className="text-white font-semibold">flavors</span>, 
-  delivering <span className="text-white font-semibold">happiness</span> — enjoy every bite with us.
+  Building excellence, one project at a time. Reach out for quotes, consultations, or any construction inquiries.
 </p>
 
         </div>
@@ -114,7 +113,7 @@ export default function ContactHero() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Heading */}
         <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 ${theme === 'dark' ? 'text-red-500' : 'text-black'}`}> 
-          Meet Our Support Team
+          Connect With Us
         </h2>
         {/* Cards Grid */}
         <div className="grid gap-10 md:grid-cols-3">
@@ -148,7 +147,7 @@ export default function ContactHero() {
         </p>
         {/* Main Heading */}
         <h2 className={`text-3xl md:text-4xl font-extrabold mb-10 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}` }>
-          Need help? <span className="text-red-500">Let's get in touch</span>
+          Ready to Start Your Project? <span className="text-red-500">Contact Us</span>
         </h2>
 
         {/* Contact Form */}
@@ -205,12 +204,12 @@ export default function ContactHero() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Small heading */}
         <p className="text-red-900 font-semibold uppercase mb-2">
-          Location
+          Office Location
         </p>
 
         {/* Main heading */}
         <h2 className={`text-3xl md:text-4xl font-extrabold mb-10 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-          How to Reach Our Location
+          Visit Our Head Office
         </h2>
 
         {/* Map embed */}
@@ -236,10 +235,10 @@ export default function ContactHero() {
         {/* Left: Image and Heading */}
         <div>
           <p className="text-red-500 font-semibold uppercase mb-2">
-            Frequently Asked Questions
+            Construction FAQs
           </p>
           <h2 className={`text-4xl md:text-5xl font-extrabold mb-8 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            Got <span className="text-red-500">Questions?</span> We've Got Answers
+            Have <span className="text-red-500">Questions?</span> We Have Answers
           </h2>
           <img 
             src={faqImage} 
@@ -283,10 +282,10 @@ export default function ContactHero() {
       <div className="max-w-4xl mx-auto text-center px-6">
         {/* Heading */}
         <h2 className={`text-4xl md:text-5xl font-extrabold mb-4 ${theme === 'dark' ? 'text-red-500' : 'text-gray-900'}`}>
-          Stay Updated
+          Stay Updated on Construction News
         </h2>
         <p className={`text-lg mb-8 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}>
-          Subscribe to our newsletter and never miss our latest news, updates, and special offers.
+          Subscribe to our newsletter for the latest construction industry updates, project highlights, and expert tips.
         </p>
 
         {/* Form */}

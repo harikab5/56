@@ -1,3 +1,6 @@
+import sustainable from "../assets/sustainable.jpg";
+import expert from "../assets/expert.jpg";
+import quality from "../assets/quality.png";
 import React from "react";
 import special1 from "../assets/special1.jpg";
 import special2 from "../assets/special2.jpg";
@@ -33,9 +36,9 @@ export default function Home2() {
 					<p className="text-lg md:text-xl text-white/90 text-center mb-8 max-w-2xl drop-shadow">
 						Welcome to ArchiBuild, where innovation meets craftsmanship. Explore our architectural designs, project management services, and commitment to excellence in every structure we create.
 					</p>
-					<button className="relative border border-white text-white px-8 py-3 rounded-lg text-lg font-serif flex items-center group bg-transparent hover:bg-white/10 transition">
+					<button className="relative bg-green-600 border border-green-600 text-white px-8 py-3 rounded-lg text-lg font-serif flex items-center group hover:bg-green-700 transition">
 						Learn More
-						<span className="ml-3 w-8 h-0.5 bg-white block group-hover:bg-red-500 transition-all"></span>
+						<span className="ml-3 w-8 h-0.5 bg-white block group-hover:bg-green-300 transition-all"></span>
 					</button>
 				</div>
 			</section>
@@ -46,20 +49,20 @@ export default function Home2() {
   <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center justify-center rounded-xl shadow-lg p-8">
     <div className="md:w-1/2 w-full order-2 md:order-1 flex flex-col justify-center">
       <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Heritage & Legacy</h2>
-      <p className="text-lg text-gray-700 mb-4">
-        Our restaurant's journey began decades ago, rooted in a passion for authentic flavors and heartfelt hospitality. From humble beginnings to a celebrated culinary destination, our legacy is built on tradition, innovation, and a commitment to excellence. Every dish tells a story—of family, culture, and the joy of sharing great food.
-      </p>
-      <ul className="text-gray-700 mb-6 list-disc list-inside">
-        <li>Established in 1985, serving generations of food lovers</li>
-        <li>Family-owned and operated with pride</li>
-        <li>Honoring traditional recipes with a modern twist</li>
-        <li>Recognized for excellence in taste and service</li>
-      </ul>
-      <button className="w-full bg-red-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-red-700 transition">Learn More</button>
+			<p className="text-lg text-gray-700 mb-4">
+				Our construction company’s journey began decades ago, founded on a commitment to quality craftsmanship and client satisfaction. From modest projects to landmark developments, our legacy is built on trust, innovation, and a dedication to excellence. Every structure we build tells a story—of teamwork, expertise, and the vision to shape communities.
+			</p>
+			<ul className="text-gray-700 mb-6 list-disc list-inside">
+				<li>Established in 1985, building for generations</li>
+				<li>Family-owned and operated with integrity</li>
+				<li>Honoring traditional building methods with modern technology</li>
+				<li>Recognized for excellence in construction and service</li>
+			</ul>
+	<button className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-green-700 transition">Learn More</button>
     </div>
-    <div className="md:w-1/2 w-full order-1 md:order-2 flex justify-center mb-8 md:mb-0">
-      <img src={heritage} alt="Heritage & Legacy" className="rounded-xl shadow-lg object-cover w-full h-96 max-w-xl" />
-    </div>
+		<div className="md:w-1/2 w-full order-1 md:order-2 flex justify-center mb-8 md:mb-0">
+			<img src={heritage} alt="Heritage & Legacy" className="rounded-xl shadow-lg object-cover w-full h-[450px] md:h-[550px]" />
+		</div>
   </div>
 </section>
 
@@ -133,23 +136,23 @@ export default function Home2() {
 		</h2>
 		<p className="text-lg text-green-600 mb-8">Why Choose Us</p>
 		<div className="flex flex-wrap md:flex-nowrap gap-8">
-			<div className="border border-green-300 p-6 rounded-lg shadow-lg bg-white flex-1">
+			<div className="border border-green-300 p-6 rounded-lg shadow-lg bg-green-50 flex-1">
 				<div className="flex justify-center mb-4">
-					<img src="../assets/icon1.svg" alt="Quality Materials" className="w-12 h-12" />
+					<img src={quality} alt="Quality Materials" className="w-20 h-20 object-contain" />
 				</div>
 				<h3 className="text-xl font-bold text-gray-800 mb-4">Quality Materials</h3>
 				<p className="text-gray-600">We use only the highest-quality materials in every project for unmatched durability and aesthetics.</p>
 			</div>
 			<div className="border border-green-300 p-6 rounded-lg shadow-lg bg-white flex-1">
 				<div className="flex justify-center mb-4">
-					<img src="../assets/icon2.svg" alt="Expert Team" className="w-12 h-12" />
+					<img src={expert} alt="Expert Team" className="w-20 h-20 object-cover rounded-full" />
 				</div>
 				<h3 className="text-xl font-bold text-gray-800 mb-4">Expert Team</h3>
 				<p className="text-gray-600">Our team of architects and engineers are dedicated to delivering innovative and sustainable designs.</p>
 			</div>
 			<div className="border border-green-300 p-6 rounded-lg shadow-lg bg-white flex-1">
 				<div className="flex justify-center mb-4">
-					<img src="../assets/icon3.svg" alt="Sustainable Practices" className="w-12 h-12" />
+					<img src={sustainable} alt="Sustainable Practices" className="w-20 h-20 object-cover rounded-full" />
 				</div>
 				<h3 className="text-xl font-bold text-gray-800 mb-4">Sustainable Practices</h3>
 				<p className="text-gray-600">We prioritize eco-friendly solutions to ensure our projects contribute to a greener future.</p>
@@ -168,7 +171,7 @@ export default function Home2() {
 			Experience excellence in construction and architectural design. Contact us to explore our services and bring your vision to life with precision and innovation.
 		</p>
 		<div className="flex justify-center gap-4">
-			<button className="bg-green-300 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-green-400 transition">
+			<button className="bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-green-700 transition">
 				Contact Us
 			</button>
 			<button className="border border-green-300 text-green-600 px-6 py-3 rounded-lg text-lg font-medium hover:bg-green-300 hover:text-white transition">

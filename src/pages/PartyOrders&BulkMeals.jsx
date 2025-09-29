@@ -1,88 +1,93 @@
 import React, { useState } from "react";
-import partyVideo from "../assets/party.mp4";
-import party1 from "../assets/party1.jpg";
-import party2 from "../assets/party2.webp";
-import party3 from "../assets/party3.avif";
+import renovationHero from "../assets/heritage.jpg";
+import renovation1 from "../assets/feature3.png";
+import renovation2 from "../assets/food1.webp";
+import renovation3 from "../assets/food2.webp";
 
-import { FaGlassCheers, FaUsers, FaTruck, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaIndustry, FaTools, FaDraftingCompass, FaHardHat, FaCheckCircle, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Olivia Carter",
-    role: "Event Planner",
-    text: "They made catering for 200 guests seamless — food was hot, fresh, and everyone loved it!",
+    name: "Ramesh Kumar",
+    role: "Factory Owner",
+    text: "Our industrial renovation was completed on time and with minimal disruption. The facility is now safer and more efficient!",
   },
   {
-    name: "Ethan James",
-    role: "Birthday Host",
-    text: "The bulk order was a hit — delicious dishes, generous portions, and timely delivery.",
+    name: "Priya Shah",
+    role: "Warehouse Manager",
+    text: "The team modernized our warehouse and improved workflow. Highly recommended for industrial upgrades!",
   },
   {
-    name: "Sophia Brown",
-    role: "Corporate Organizer",
-    text: "Perfect for office parties. They even customized the menu to fit dietary preferences.",
+    name: "Vikram Patel",
+    role: "Operations Head",
+    text: "Excellent project management and quality work. Every milestone was met as promised.",
   },
   {
-    name: "Michael Turner",
-    role: "Family Reunion Host",
-    text: "Ordering was effortless and the quality exceeded expectations — five stars!",
-  },
-  {
-    name: "Amelia Scott",
-    role: "Repeat Customer",
-    text: "I've used their bulk meals for three events now — consistently outstanding!",
+    name: "Anita Rao",
+    role: "Plant Supervisor",
+    text: "The renovation process was smooth and the results exceeded our expectations. Our facility looks brand new!",
   },
 ];
 
 const steps = [
   {
-    icon: <FaUsers size={28} className="text-white" />,
-    title: "Choose Your Package",
-    description: "Select from our party platters or fully customized bulk meals.",
+    icon: <FaIndustry size={28} className="text-white" />,
+    title: "Consultation",
+    description: "Discuss your renovation needs and goals with our experts.",
   },
   {
-    icon: <FaGlassCheers size={28} className="text-white" />,
-    title: "Place Your Order",
-    description: "Book online or by phone — we'll confirm every detail with you.",
+    icon: <FaTools size={28} className="text-white" />,
+    title: "Assessment",
+    description: "We evaluate your facility and recommend the best solutions.",
   },
   {
-    icon: <FaTruck size={28} className="text-white" />,
-    title: "Enjoy Your Event",
-    description: "We deliver on time or prepare for easy pickup. Simply serve and celebrate.",
+    icon: <FaDraftingCompass size={28} className="text-white" />,
+    title: "Design & Planning",
+    description: "Our engineers create a detailed renovation plan and timeline.",
+  },
+  {
+    icon: <FaHardHat size={28} className="text-white" />,
+    title: "Renovation",
+    description: "We upgrade your facility with minimal disruption to operations.",
+  },
+  {
+    icon: <FaCheckCircle size={28} className="text-white" />,
+    title: "Handover",
+    description: "Move into your improved industrial space, ready for business.",
   },
 ];
 
 const plans = [
   {
-    name: "Small Gathering",
-    price: "$199",
-    period: "/10-15 guests",
+    name: "Basic Upgrade",
+    price: "$50k+",
+    period: "",
     features: [
-      "Appetizers + Main Course",
-      "Disposable plates & cutlery",
-      "Pickup or delivery",
+      "Essential repairs & safety upgrades",
+      "Quick turnaround",
+      "Minimal downtime",
     ],
     highlighted: false,
   },
   {
-    name: "Medium Party",
-    price: "$399",
-    period: "/25-30 guests",
+    name: "Modernization",
+    price: "$150k+",
+    period: "",
     features: [
-      "Full course buffet",
-      "Desserts included",
-      "Free delivery",
+      "Facility redesign",
+      "Energy-efficient systems",
+      "Workflow optimization",
     ],
     highlighted: true,
   },
   {
-    name: "Grand Celebration",
-    price: "$799",
-    period: "/50+ guests",
+    name: "Full Renovation",
+    price: "$300k+",
+    period: "",
     features: [
-      "Custom menu planning",
-      "On-site setup available",
-      "Dedicated event manager",
+      "Complete overhaul",
+      "Custom engineering",
+      "Smart facility integration",
     ],
     highlighted: false,
   },
@@ -104,55 +109,51 @@ const PartyOrdersHero = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src={partyVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
+      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center bg-green-50">
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
+          src={renovationHero}
+          alt="Industrial Renovation Hero"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
-            Party Orders & <span className="text-red-500">Bulk Meals</span>
+            Industrial <span className="text-green-500">Renovation Services</span>
           </h1>
           <p className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl">
-            Hassle-free catering solutions — perfect for birthdays, weddings, 
-            corporate events, and big family gatherings.
+            Upgrade, modernize, and optimize your industrial facility with our expert renovation solutions. Quality, safety, and efficiency for your business growth.
           </p>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 md:px-20 bg-red-50">
+      <section className="py-20 px-6 md:px-20 bg-green-50">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src={party1}
-              alt="Party catering"
+              src={renovation1}
+              alt="Industrial Renovation"
               className="w-full h-auto rounded-2xl shadow-lg"
             />
           </div>
           <div>
             <h2 className="text-4xl font-bold text-black mb-6">
-              Why Choose Our Party Catering?
+              Why Choose Our Renovation Services?
             </h2>
             <p className="text-black mb-4">
-              Planning an event is stressful — but feeding your guests doesn’t have to be. 
-              Our bulk meal services offer convenience without compromising on flavor.
+              We specialize in upgrading and modernizing industrial facilities for improved safety, efficiency, and productivity.
             </p>
             <p className="text-black mb-4">
-              We prepare generous portions using fresh ingredients, packaged 
-              neatly for effortless serving.
+              Our experienced team manages every aspect of your renovation, from assessment and planning to construction and finishing.
             </p>
             <p className="text-black mb-4">
-              From small gatherings to grand celebrations, our team helps 
-              you customize your order to match your theme and preferences.
+              We use premium materials, innovative techniques, and sustainable practices to ensure your facility is built to last and meets the highest standards.
             </p>
             <p className="text-black mb-4">
-              Need vegetarian, vegan, or allergy-friendly options? We've got you covered.
+              Our transparent process keeps you informed and involved at every stage, so you can watch your facility transform with confidence.
+            </p>
+            <p className="text-black mb-4">
+              Contact us today to start your industrial renovation and experience a seamless, stress-free upgrade journey.
             </p>
           </div>
         </div>
@@ -160,9 +161,9 @@ const PartyOrdersHero = () => {
 
       {/* Pricing Section */}
       <section className="py-20 px-6 bg-white text-center" id="pricing">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">Party Packages</h2>
+        <h2 className="text-4xl font-bold text-green-500 mb-4">Our Renovation Packages</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Flexible options to suit any event size or budget.
+          Choose a package that fits your facility's needs and budget. Upgrade anytime — no hidden costs!
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -186,11 +187,11 @@ const PartyOrdersHero = () => {
               <button
                 className={`px-6 py-3 rounded-full font-semibold transition 
                   ${plan.highlighted 
-                    ? "bg-white text-red-500 hover:bg-gray-100" 
-                    : "bg-red-500 text-white hover:bg-red-600"}`}
-              >
-                Order Now
-              </button>
+                    ? "bg-white text-green-500 hover:bg-gray-100" 
+                    : "bg-green-500 text-white hover:bg-green-600"}`}
+                >
+                  Get Started
+                </button>
             </div>
           ))}
         </div>
@@ -200,24 +201,24 @@ const PartyOrdersHero = () => {
       <section className="py-10 px-4 bg-red-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold text-black mb-6">What Clients Say</h2>
+            <h2 className="text-4xl font-bold text-black mb-6">Client Reviews</h2>
             <div className="bg-gray-100 rounded-2xl p-8 shadow-lg">
               <p className="text-gray-700 text-lg italic mb-6">
                 "{testimonial.text}"
               </p>
               <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-              <p className="text-red-500 text-sm">{testimonial.role}</p>
+              <p className="text-green-500 text-sm">{testimonial.role}</p>
             </div>
             <div className="flex justify-center md:justify-start gap-4 mt-6">
               <button
                 onClick={prevTestimonial}
-                className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+                className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
               >
                 <FaArrowLeft />
               </button>
               <button
                 onClick={nextTestimonial}
-                className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+                className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
               >
                 <FaArrowRight />
               </button>
@@ -225,8 +226,8 @@ const PartyOrdersHero = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src={party2}
-              alt="Bulk meal catering"
+              src={renovation2}
+              alt="Renovation Facility"
               className="rounded-2xl shadow-lg w-full max-w-md h-[350px] w-[500px] object-cover"
             />
           </div>
@@ -235,16 +236,16 @@ const PartyOrdersHero = () => {
 
       {/* Steps Section */}
       <section className="py-20 px-6 bg-white text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">How to Order</h2>
+        <h2 className="text-4xl font-bold text-green-500 mb-4">How It Works</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Simple, fast, and reliable — enjoy stress-free event catering.
+          Renovating your industrial facility is simple and stress-free with our proven process.
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-6">
           {steps.map((step, idx) => (
             <div key={idx} className="flex items-center">
               <div className="flex flex-col hover:scale-105 transition items-center max-w-[200px]">
-                <div className="bg-red-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
+                <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
                   {step.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
@@ -261,24 +262,24 @@ const PartyOrdersHero = () => {
       {/* Call to Action Section */}
       <section className="relative py-24 px-6 md:px-20 text-white">
         <img
-          src={party3}
-          alt="Party meal setup"
+          src={renovation3}
+          alt="Renovation Project"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute inset-0 bg-red-500/70 z-0"></div>
+        <div className="absolute inset-0 bg-green-500/70 z-0"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-          <h2 className="text-5xl font-extrabold mb-6">Ready to Feed Your Guests?</h2>
+          <h2 className="text-5xl font-extrabold mb-6">Ready to Renovate Your Facility?</h2>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Order now and make your celebration unforgettable — we handle the food so you can enjoy the party.
+            Upgrade your industrial space for the future. Contact us today to get started!
           </p>
           <button
             onClick={() => {
               document.getElementById("pricing").scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-white text-black py-4 px-10 text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
+            className="bg-white text-green-600 py-4 px-10 text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
           >
-            Order Now
+            Get Started
           </button>
         </div>
       </section>

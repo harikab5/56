@@ -1,100 +1,100 @@
 import React, { useState } from "react";
-import cateringVideo from "../assets/catering.mp4";
-import catering1 from "../assets/catering1.jpg";
-import catering2 from "../assets/catering2.jpg";
-import catering3 from "../assets/catering3.webp";
+import commercialHero from "../assets/feature2.jpg";
+import commercial1 from "../assets/feature3.png";
+import commercial2 from "../assets/heritage.jpg";
+import commercial3 from "../assets/deals.webp";
 
 
-import { FaConciergeBell, FaShoppingCart, FaTruck, FaSmile, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaBuilding, FaClipboardList, FaDraftingCompass, FaHardHat, FaCheckCircle, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Jennifer Clark",
-    role: "Event Planner",
-    text: "The catering was flawless — every dish was fresh, beautifully presented, and on time!",
+    name: "Rajesh Mehta",
+    role: "Business Owner",
+    text: "Our new office complex was delivered on time and exceeded our expectations. The team was professional and responsive throughout the project.",
   },
   {
-    name: "Robert King",
-    role: "Corporate Manager",
-    text: "We hired them for our annual conference. Service was professional and seamless.",
+    name: "Anita Desai",
+    role: "Retail Manager",
+    text: "The commercial space is modern, efficient, and perfectly suited for our needs. Highly recommended for business construction!",
   },
   {
-    name: "Linda Perez",
-    role: "Bride",
-    text: "The wedding banquet was perfect! Guests loved every bite, and the team handled everything.",
+    name: "Vikram Singh",
+    role: "Investor",
+    text: "Excellent project management and quality construction. Every milestone was met as promised.",
   },
   {
-    name: "Chris Allen",
-    role: "Restaurant Owner",
-    text: "They managed a high-volume event with zero issues. Truly dependable service.",
-  },
-  {
-    name: "Sophia Brown",
-    role: "Birthday Host",
-    text: "Delicious food, wonderful staff, and stress-free organization — highly recommended!",
+    name: "Sunita Rao",
+    role: "Franchise Owner",
+    text: "The team made the entire process stress-free, from planning to handover. Our new store looks fantastic!",
   },
 ];
 
 const steps = [
   {
-    icon: <FaConciergeBell size={28} className="text-white" />,
-    title: "Plan Your Menu",
-    description: "Choose from a wide selection of cuisines and customize to your event.",
+    icon: <FaBuilding size={28} className="text-white" />,
+    title: "Consultation",
+    description: "Discuss your business goals and project requirements with our experts.",
   },
   {
-    icon: <FaShoppingCart size={28} className="text-white" />,
-    title: "Confirm Your Booking",
-    description: "Reserve your date, finalize details, and relax while we prepare.",
+    icon: <FaClipboardList size={28} className="text-white" />,
+    title: "Planning",
+    description: "We create a detailed project plan, timeline, and transparent estimate.",
   },
   {
-    icon: <FaTruck size={28} className="text-white" />,
-    title: "On-Time Delivery",
-    description: "We deliver and set up everything fresh, hot, and beautifully arranged.",
+    icon: <FaDraftingCompass size={28} className="text-white" />,
+    title: "Design",
+    description: "Our architects design your commercial space for maximum efficiency and appeal.",
   },
   {
-    icon: <FaSmile size={28} className="text-white" />,
-    title: "Enjoy Your Event",
-    description: "We handle service so you can focus on your guests.",
+    icon: <FaHardHat size={28} className="text-white" />,
+    title: "Construction",
+    description: "We build your project using quality materials and skilled professionals.",
+  },
+  {
+    icon: <FaCheckCircle size={28} className="text-white" />,
+    title: "Handover",
+    description: "Move into your new commercial space, ready for business.",
   },
 ];
 
 const plans = [
   {
-    name: "Basic Event",
-    price: "$199",
-    period: "/event",
+    name: "Office Space",
+    price: "$100k+",
+    period: "",
     features: [
-      "Up to 20 guests",
-      "Standard menu options",
-      "Free delivery within 10 miles",
+      "Modern office construction",
+      "Standard interiors",
+      "Essential amenities",
     ],
     highlighted: false,
   },
   {
-    name: "Premium Event",
-    price: "$499",
-    period: "/event",
+    name: "Retail Outlet",
+    price: "$200k+",
+    period: "",
     features: [
-      "Up to 50 guests",
-      "Customizable menu",
-      "Dedicated event manager",
+      "Custom retail construction",
+      "Premium finishes",
+      "Brand-focused design",
     ],
     highlighted: true,
   },
   {
-    name: "Grand Event",
-    price: "$999",
-    period: "/event",
+    name: "Business Center",
+    price: "$500k+",
+    period: "",
     features: [
-      "100+ guests",
-      "Fully customized menu",
-      "On-site chef team & full service",
+      "Large-scale commercial project",
+      "Luxury amenities",
+      "Smart building solutions",
     ],
     highlighted: false,
   },
 ];
 
-const CateringServicesHero = () => {
+const CommercialProjectsHero = () => {
   const [index, setIndex] = useState(0);
 
   const nextTestimonial = () => {
@@ -110,35 +110,31 @@ const CateringServicesHero = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src={cateringVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
+      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center bg-green-50">
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
+          src={commercialHero}
+          alt="Commercial Project Hero"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
-            Exceptional <span className="text-red-500">Catering</span> Services
+            Building <span className="text-green-500">Commercial Success</span>
           </h1>
           <p className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl">
-            Make your events unforgettable with gourmet dishes, flawless service,
-            and perfect presentation — delivered right to your venue!
+            Expert commercial construction for offices, retail, and business centers. Quality, efficiency, and innovation for your business growth.
           </p>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 md:px-20 bg-red-50">
+      <section className="py-20 px-6 md:px-20 bg-green-50">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
           <div>
             <img
-              src={catering1}
-              alt="Our Catering Service"
+              src={commercial1}
+              alt="Our Commercial Project"
               className="w-full h-auto rounded-2xl shadow-lg"
             />
           </div>
@@ -146,27 +142,22 @@ const CateringServicesHero = () => {
           {/* Right Content */}
           <div className="text-black">
             <h2 className="text-4xl font-bold text-black mb-6">
-              About Our Catering
+              About Our Commercial Projects
             </h2>
             <p className="text-black mb-4">
-              We specialize in creating memorable dining experiences for weddings,
-              corporate events, private parties, and celebrations of any size.
+              We specialize in constructing modern office buildings, retail outlets, malls, and business centers tailored to your business needs.
             </p>
             <p className="text-black mb-4">
-              From elegant plated dinners to vibrant buffet spreads, our chefs craft
-              menus tailored to your taste, theme, and budget.
+              Our experienced team manages every aspect of your commercial project, from design and planning to construction and finishing.
             </p>
             <p className="text-black mb-4">
-              Using only premium, fresh ingredients, we ensure that every dish is
-              bursting with flavor and beautifully presented.
+              We use premium materials, innovative techniques, and sustainable practices to ensure your project is built to last and meets the highest standards.
             </p>
             <p className="text-black mb-4">
-              Our professional team handles everything — menu planning, delivery,
-              setup, and service — so you can focus on enjoying your event.
+              Our transparent process keeps you informed and involved at every stage, so you can watch your business vision come to life with confidence.
             </p>
             <p className="text-black mb-4">
-              Choose from our flexible catering packages or request a completely
-              custom menu designed exclusively for your occasion.
+              Contact us today to start your commercial project and experience a seamless, stress-free building journey.
             </p>
           </div>
         </div>
@@ -174,10 +165,9 @@ const CateringServicesHero = () => {
 
       {/* Pricing Section */}
       <section className="py-20 px-6 bg-white text-center" id="pricing">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">Our Packages</h2>
+        <h2 className="text-4xl font-bold text-green-500 mb-4">Our Commercial Packages</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Whether it's an intimate gathering or a grand celebration, we have a
-          package to suit every event.
+          Choose a package that fits your business needs and budget. Upgrade anytime — no hidden costs!
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -201,11 +191,11 @@ const CateringServicesHero = () => {
               <button
                 className={`px-6 py-3 rounded-full font-semibold transition 
                   ${plan.highlighted 
-                    ? "bg-white text-red-500 hover:bg-gray-100" 
-                    : "bg-red-500 text-white hover:bg-red-600"}`}
-              >
-                Book Now
-              </button>
+                    ? "bg-white text-green-500 hover:bg-gray-100" 
+                    : "bg-green-500 text-white hover:bg-green-600"}`}
+                >
+                  Get Started
+                </button>
             </div>
           ))}
         </div>
@@ -217,27 +207,27 @@ const CateringServicesHero = () => {
           {/* Left Side - Text Card */}
           <div className="text-center md:text-left">
             <h2 className="text-4xl font-bold text-black mb-6">
-              What Clients Say
+              What Our Clients Say
             </h2>
             <div className="bg-gray-100 rounded-2xl p-8 shadow-lg">
               <p className="text-gray-700 text-lg italic mb-6">
                 "{testimonial.text}"
               </p>
               <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-              <p className="text-red-500 text-sm">{testimonial.role}</p>
+              <p className="text-green-500 text-sm">{testimonial.role}</p>
             </div>
 
             {/* Arrows */}
             <div className="flex justify-center md:justify-start gap-4 mt-6">
               <button
                 onClick={prevTestimonial}
-                className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+                className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
               >
                 <FaArrowLeft />
               </button>
               <button
                 onClick={nextTestimonial}
-                className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+                className="p-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition"
               >
                 <FaArrowRight />
               </button>
@@ -247,8 +237,8 @@ const CateringServicesHero = () => {
           {/* Right Side - Image */}
           <div className="flex justify-center">
             <img
-              src={catering2}
-              alt="Catering dishes"
+              src={commercial2}
+              alt="Commercial Project"
               className="rounded-2xl shadow-lg w-full max-w-md h-[350px] w-[500px] object-cover"
             />
           </div>
@@ -257,9 +247,9 @@ const CateringServicesHero = () => {
 
       {/* Steps Section */}
       <section className="py-20 px-6 bg-white text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-4">How It Works</h2>
+        <h2 className="text-4xl font-bold text-green-500 mb-4">How It Works</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Booking our catering service is simple and stress-free.
+          Building your commercial project is simple and stress-free with our proven process.
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-6">
@@ -267,7 +257,7 @@ const CateringServicesHero = () => {
             <div key={index} className="flex items-center">
               {/* Step card */}
               <div className="flex flex-col hover:scale-105 transition items-center max-w-[200px]">
-                <div className="bg-red-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
+                <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
                   {step.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
@@ -286,27 +276,26 @@ const CateringServicesHero = () => {
       {/* Call to Action Section */}
       <section className="relative py-24 px-6 md:px-20 text-white">
         <img
-          src={catering3}
-          alt="Catering service"
+          src={commercial3}
+          alt="Commercial Project"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute inset-0 bg-red-500/70 z-0"></div>
+        <div className="absolute inset-0 bg-green-500/70 z-0"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
           <h2 className="text-5xl font-extrabold mb-6">
-            Ready to Book Your Event?
+            Ready to Start Your Commercial Project?
           </h2>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Let us handle the food while you focus on creating unforgettable
-            moments. Reserve your catering service today!
+            Let us help you build your next office, retail, or business space. Contact us today to get started!
           </p>
           <button
             onClick={() => {
               document.getElementById("pricing").scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-white text-black py-4 px-10 text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
+            className="bg-white text-green-600 py-4 px-10 text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
           >
-            Book Now
+            Get Started
           </button>
         </div>
       </section>
@@ -314,4 +303,4 @@ const CateringServicesHero = () => {
   );
 };
 
-export default CateringServicesHero;
+export default CommercialProjectsHero;

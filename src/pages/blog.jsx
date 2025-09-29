@@ -7,130 +7,127 @@ import feature3 from "../assets/feature3.png"; // replace with your cuisine vari
 import { Link } from "react-router-dom";
 const categories = [
   {
-    name: "Starters",
-    desc: "Tasty appetizers and light bites to kickstart your meal.",
+    name: "Architecture & Design",
+    desc: "Latest trends, tips, and inspiration for modern building design.",
   },
   {
-    name: "Main Course",
-    desc: "Deliciously crafted dishes to satisfy every craving.",
+    name: "Construction Technology",
+    desc: "Innovations and tools transforming the construction industry.",
   },
   {
-    name: "Desserts",
-    desc: "Sweet treats and indulgent delights to end on a high note.",
+    name: "Project Management",
+    desc: "Best practices for planning, scheduling, and delivering projects on time.",
   },
   {
-    name: "Beverages",
-    desc: "Refreshing drinks, juices, and shakes to complement your meal.",
+    name: "Safety & Compliance",
+    desc: "Guides and updates on site safety, regulations, and quality standards.",
   },
 ];
-const cookingTips = [
+const constructionTips = [
   {
-    tip: "Always soak onions in cold water for 10 minutes before using in salads – it removes bitterness and adds crunch.",
+    tip: "Always check site conditions and soil quality before starting foundation work.",
   },
   {
-    tip: "Marinate meat at least 30 minutes before cooking – it makes it juicier and full of flavor.",
+    tip: "Use proper PPE (Personal Protective Equipment) at all times on site.",
   },
   {
-    tip: "Use leftover rice to make quick fried rice – it cooks better and doesn’t stick together.",
+    tip: "Schedule regular safety briefings to keep your team updated on best practices.",
   },
   {
-    tip: "Add a pinch of salt while boiling pasta – it enhances the flavor and prevents stickiness.",
+    tip: "Double-check measurements before cutting or pouring materials to avoid costly mistakes.",
   },
   {
-    tip: "Toast spices lightly before grinding or cooking – it brings out deeper flavors and aroma.",
+    tip: "Keep construction documents and plans easily accessible for all team members.",
   },
   {
-    tip: "When frying, don’t overcrowd the pan – it lowers oil temperature and makes food soggy.",
+    tip: "Invest in quality tools and maintain them regularly for better efficiency.",
   },
   {
-    tip: "Use lemon juice to balance overly salty or spicy dishes – it adds freshness too.",
+    tip: "Monitor weather forecasts to plan critical construction activities accordingly.",
   },
   {
-    tip: "Let cooked meat rest for 5 minutes before cutting – it locks in juices for better taste.",
+    tip: "Document progress with photos and daily logs for better project tracking.",
   },
 ];
 
-  const features = [
+const features = [
   {
-    title: "Fresh & Quality Ingredients",
+    title: "Sustainable Building Materials",
     description:
-      "We use only the freshest, handpicked ingredients to create delicious meals. \
-Every dish is crafted with care to ensure authentic taste and balanced nutrition.",
-    image: feature1, // replace with your food-related image
-   link: "/blog/1", 
+      "Explore the latest eco-friendly materials that improve durability and reduce environmental impact in construction projects.",
+    image: feature1,
+    link: "/blog/1",
   },
   {
-    title: "Fast & Reliable Delivery",
+    title: "Smart Construction Technology",
     description:
-      "Get your food delivered hot, fresh, and right on time. \
-With smart tracking, you’ll always know exactly when your meal arrives.",
-    image: feature2, // replace with your delivery-related image
-    link: "/blog/2", 
+      "Discover how drones, BIM, and IoT are revolutionizing site management, safety, and efficiency.",
+    image: feature2,
+    link: "/blog/2",
   },
   {
-    title: "Wide Variety of Cuisines",
+    title: "Modern Project Management",
     description:
-      "From local favorites to global flavors, our menu has something for everyone. \
-Enjoy a wide range of dishes made fresh to satisfy every craving.",
-    image: feature3, // replace with your cuisine variety image
-    link: "/blog/3", 
+      "Learn about agile methods, digital tools, and best practices for delivering projects on time and within budget.",
+    image: feature3,
+    link: "/blog/3",
   },
 ];
 
 
 const services = [
   {
-    name: "Food Delivery",
+    name: "Site Supervision",
     features: [
-      "Fast & hassle-free delivery",
-      "Real-time order tracking",
-      "Multiple secure payment options",
-      "Exclusive online deals",
+      "Daily site inspections",
+      "Quality control checks",
+      "Safety compliance monitoring",
+      "Progress documentation",
     ],
   },
   {
-    name: "Catering Services",
+    name: "Project Planning",
     features: [
-      "Customized menus for events",
-      "Professional on-site service",
-      "Bulk food preparation",
-      "Perfect for weddings & corporate events",
+      "Detailed scheduling",
+      "Resource allocation",
+      "Budget estimation",
+      "Risk assessment",
     ],
   },
   {
-    name: "Dine-In Experience",
+    name: "Design & Engineering",
     features: [
-      "Comfortable family-friendly seating",
-      "Chef’s special signature dishes",
-      "Hygienic & cozy ambience",
-      "Attentive customer service",
+      "Architectural drawings",
+      "Structural analysis",
+      "MEP coordination",
+      "Sustainable solutions",
     ],
   },
   {
-    name: "Party Orders & Bulk Meals",
+    name: "Procurement",
     features: [
-      "Large quantity food packages",
-      "Customizable menu options",
-      "Affordable bulk pricing",
-      "Timely preparation & delivery",
+      "Vendor management",
+      "Material sourcing",
+      "Cost negotiation",
+      "Timely delivery",
     ],
   },
   {
-    name: "Subscription Meals",
+    name: "Client Reporting",
     features: [
-      "Daily & weekly meal plans",
-      "Healthy & diet-friendly options",
-      "Flexible subscriptions",
-      "Freshly prepared every day",
+      "Weekly progress updates",
+      "Transparent communication",
+      "Issue tracking",
+      "Photo documentation",
     ],
   },
   {
-    name: "Takeaway / Pickup",
+    name: "Post-Construction",
     features: [
-      "Quick self-pickup service",
-      "No waiting time",
-      "Freshly packed meals",
-      "Special discounts for takeaway",
+      "Final inspections",
+      "Handover documentation",
+      "Warranty support",
+      "Maintenance planning",
     ],
   },
 ];
@@ -177,14 +174,10 @@ export default function BlogHero() {
         {/* Content */}
         <div className="relative text-center px-6" style={{ color: theme === 'dark' ? '#fff' : '#fff' }}>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Explore Our <span style={{ color: '#ef4444' }}>Blogs</span>
+            Construction <span style={{ color: '#ef4444' }}>Insights</span>
           </h1>
           <p className={`text-lg md:text-xl max-w-2xl mx-auto ${theme === 'dark' ? 'text-white' : 'text-white'}`}>
-            Stay updated with the latest insights, trends, and knowledge in{' '}
-            <span className="font-semibold" style={{ color: theme === 'dark' ? '#fff' : '#fff' }}>
-              AI, Web Development
-            </span>
-            , Data Science, and more. Learn and grow with us!
+            Stay updated with the latest trends, innovations, and best practices in construction, architecture, engineering, and project management. Build smarter with our expert tips and industry news!
           </p>
         </div>
       </section>
@@ -197,7 +190,7 @@ export default function BlogHero() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-            Featured Articles
+            Featured Construction Articles
           </h2>
 
           {/* Grid */}
@@ -241,21 +234,13 @@ export default function BlogHero() {
           {/* Left Content */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Explore by <span style={{ color: '#ef4444' }}>Categories</span>
+              Explore by <span style={{ color: '#ef4444' }}>Construction Topics</span>
             </h2>
             <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
-  Our menu is thoughtfully categorized to help you easily find
-  dishes that match your cravings—whether it's{' '}
-  <span className="font-semibold text-red-500">
-    Starters, Main Course, Desserts,
-  </span>{' '}
-  or refreshing beverages delivered to your doorstep.
+  Our blog is organized to help you easily find articles on architecture, technology, project management, and safety—everything you need to succeed in construction.
 </p>
 <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
-  Browse through our categories and discover meals crafted to satisfy every taste. 
-  Whether you’re looking for a quick bite, a family dinner, or a sweet treat to end 
-  your day, our restaurant offers freshly prepared food, speedy delivery, and 
-  flavors you’ll love. Enjoy convenience, taste, and quality—all in one place.
+  Browse through our categories and discover expert advice, case studies, and the latest industry updates. Whether you’re a builder, architect, engineer, or project owner, our blog has something for you.
 </p>
 
           </div>
@@ -325,11 +310,12 @@ export default function BlogHero() {
 
 
 
+
   <section className={`py-16 ${theme === 'dark' ? 'bg-[#181818]' : 'bg-[#fff]'}`}>
     <div className="max-w-6xl mx-auto px-6">
       {/* Heading */}
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-12" style={{ color: '#ef4444' }}>
-        Myths & Facts
+        Construction Myths & Facts
       </h2>
 
       {/* Grid */}
@@ -339,13 +325,13 @@ export default function BlogHero() {
     <div className="flex gap-2">
       <h3 className="text-red-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Online food delivery always takes too long.
+        Green buildings are always more expensive to build.
       </p>
     </div>
     <div className="flex gap-2">
       <h3 className="text-green-600 font-bold">Fact:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Our delivery partners ensure your food arrives hot and fresh, usually within 30–40 minutes.
+        Sustainable design can reduce long-term costs and many eco-friendly materials are now competitively priced.
       </p>
     </div>
   </div>
@@ -355,13 +341,13 @@ export default function BlogHero() {
     <div className="flex gap-2">
       <h3 className="text-red-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Restaurant food isn’t as fresh as homemade meals.
+        Project delays are unavoidable in construction.
       </p>
     </div>
     <div className="flex gap-2">
       <h3 className="text-green-600 font-bold">Fact:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        We use fresh, high-quality ingredients daily to prepare every dish with care.
+        With proper planning, risk management, and communication, most delays can be prevented or minimized.
       </p>
     </div>
   </div>
@@ -371,13 +357,13 @@ export default function BlogHero() {
     <div className="flex gap-2">
       <h3 className="text-red-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Online delivery is always expensive.
+        Prefabricated buildings are low quality.
       </p>
     </div>
     <div className="flex gap-2">
       <h3 className="text-green-600 font-bold">Fact:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        With combo deals, discounts, and free delivery offers, you can enjoy great meals at affordable prices.
+        Modern prefab construction uses high-quality materials and strict standards, often exceeding traditional builds.
       </p>
     </div>
   </div>
@@ -387,13 +373,13 @@ export default function BlogHero() {
     <div className="flex gap-2">
       <h3 className="text-red-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Ordering food online is unsafe.
+        Safety gear is only needed for high-risk jobs.
       </p>
     </div>
     <div className="flex gap-2">
       <h3 className="text-green-600 font-bold">Fact:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Our platform ensures safe packaging, contactless delivery, and hygienic kitchen practices.
+        PPE is essential for all construction activities to prevent injuries and save lives.
       </p>
     </div>
   </div>
@@ -403,13 +389,13 @@ export default function BlogHero() {
     <div className="flex gap-2">
       <h3 className="text-red-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        You can’t customize your order when ordering online.
+        Technology slows down construction work.
       </p>
     </div>
     <div className="flex gap-2">
       <h3 className="text-green-600 font-bold">Fact:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Our menu lets you add special instructions, choose spice levels, and request add-ons with ease.
+        Digital tools and automation actually speed up processes, improve accuracy, and enhance collaboration.
       </p>
     </div>
   </div>
@@ -419,13 +405,13 @@ export default function BlogHero() {
     <div className="flex gap-2">
       <h3 className="text-red-600 font-bold">Myth:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        Delivery food is unhealthy.
+        Only large companies can afford project management services.
       </p>
     </div>
     <div className="flex gap-2">
       <h3 className="text-green-600 font-bold">Fact:</h3>
       <p className={theme === 'dark' ? 'text-white' : 'text-black'}>
-        We offer balanced meals, healthy options, and freshly prepared dishes to suit your lifestyle.
+        Project management benefits projects of all sizes and is scalable to fit any budget.
       </p>
     </div>
   </div>
@@ -436,11 +422,11 @@ export default function BlogHero() {
 
 <div className={`py-10 ${theme === 'dark' ? 'bg-[#000]' : 'bg-red-50'}`}>
   <h2 className={`text-3xl font-bold text-center mb-8 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
-    Cooking Tips 🧑‍🍳
+    Construction Tips �️
   </h2>
 
   <div className="grid  md:grid-cols-2 gap-6 max-w-4xl mx-auto ">
-    {cookingTips.map((item, index) => (
+    {constructionTips.map((item, index) => (
       <div 
         key={index} 
         className="p-4 border border-gray-200 bg-white rounded-xl shadow-sm hover:shadow-md transition"
